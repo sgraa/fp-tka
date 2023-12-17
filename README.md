@@ -68,6 +68,7 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 1. Poin Revisi : Simulasikan 1 load balancer dan 1 worker dalam 1 VM, upgrade spesifikasi dan kemudian lakukan testing ulang
 
 2. Berikut merupakan spesifikasi VM kami yang telah diperbarui:
+
 |   Nama VM   |   Fungsi VM   | Harga VM |
 |:-----------:|:-------------:|:--------:|
 | worker1 (2vCPU) | worker dan load balancer |   $32    |
