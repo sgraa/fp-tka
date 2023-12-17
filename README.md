@@ -61,8 +61,26 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 ## Kesimpulan dan Saran
 - Arsitektur cloud yang telah kami buat, meskipun memiliki potensi untuk mencapai hingga 200+ RPS, gagal dalam mencapai hal tersebut karena tingkat failure yang tinggi dalam load balancer.
-
+`
 - Kurangnya pemahaman kami dalam memperbaiki failing load balancer menyebabkan tugas yang seharusnya dibagi sama rata antara kedua worker tidak dapat dijalankan secara maksimal, sehingga menjadi penyebab rendahnya RPS yang kami miliki.
 
+## REVISI
+1. Poin Revisi : Simulasikan 1 load balancer dan 1 worker dalam 1 VM, upgrade spesifikasi dan kemudian lakukan testing ulang
+   - Berikut merupakan spesifikasi VM kami yang telah diperbarui:
+| Nama VM | Fungsi VM | Harga VM |
+| :---:   |     :---: |    :---: |
+| worker1 (2vCPU)   | worker dan load balancer| $32|
+| worker2 (1vCPU)   | worker| $8 |
+| database          | data storing | $15|
+
+2. Melalui simulasi diatas, diperoleh hasil sebagai berikut:
+   - 250.5 RPS saat Spawn Rate 100 dengan 1000 user.
+   ![seratus](./img/seratus.jpeg)
+
+   - 247.5 RPS saat Spawn Rate 50 dengan 1000 user.
+   ![limapuluh](./img/limapulu.jpeg)
+
+   - 223.6 RPS saat Spawn Rate 25 dengan 1000 user.
+   ![dualima](./img/dualima.jpeg)
 
 
